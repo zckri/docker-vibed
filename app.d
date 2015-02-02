@@ -12,5 +12,5 @@ shared static this()
 
 void hello(HTTPServerRequest req, HTTPServerResponse res)
 {
-	res.writeBody("Hello, World! vibe.d running succesfully");
+	res.writeBody("Hello, World! Vibe.d running succesfully");
 }
