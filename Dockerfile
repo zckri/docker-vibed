@@ -17,10 +17,7 @@ RUN apt-get -y install dub libcurl4-gnutls-dev libevent-dev libssl-dev
 
 # install sample project
 RUN mkdir /var/www
-WORKDIR /var/www
-RUN dub init vibesample vibe.d
-RUN rm -rf /var/www/vibesample/source/app.d
-ADD app.d /var/www/vibesample/source/app.d
+COPY ./vibesample /var/www/vibesample
 WORKDIR /var/www/vibesample
 RUN dub build
 # prepare project for run - set permissions etc.
@@ -29,4 +26,4 @@ EXPOSE 8080
 USER www-data
 # compile and run
 VOLUME /var/www/vibesample
-CMD ["./vibesample"]
+CMD ["/var/www/vibesample/vibesample"]

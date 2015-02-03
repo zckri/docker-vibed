@@ -7,10 +7,10 @@ shared static this()
 	settings.bindAddresses = ["0.0.0.0"];
 	listenHTTP(settings, &hello);
 
-	logInfo("Please open http://localhost:8080/ in your browser.");
+	logInfo("Please open http://127.0.0.1:8080/ in your browser.");
 }
 
 void hello(HTTPServerRequest req, HTTPServerResponse res)
 {
-	res.writeBody("Hello, World! Vibe.d running succesfully");
+	res.writeBody("Hello, World!");
 }

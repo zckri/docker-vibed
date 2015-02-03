@@ -1,0 +1,10 @@
+{
+	"name": "vibesample",
+	"description": "A simple vibe.d server application.",
+	"copyright": "Copyright © 2015, aleph1x",
+	"authors": ["aleph1x"],
+	"dependencies": {
+		"vibe-d": "~>0.7.19"
+	},
+	"versions": ["VibeDefaultMain"]
+}
